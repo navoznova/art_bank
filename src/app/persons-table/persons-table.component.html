@@ -1,1 +1,17 @@
 <p>persons-table works!</p>
+
+<table>
+    <thead>
+        <tr>				
+            <th>name</th>
+            <th>hobby</th>
+        </tr>
+    </thead>
+
+    <!-- Рисуем строки с данными -->
+    <tr *ngFor="let person of persons" >
+        <td>{{person.lastname}}</td>
+        <td>{{person.card}}</td>
+    </tr>
+
+</table>

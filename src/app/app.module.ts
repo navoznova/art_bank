@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { PersonsTableComponent } from './persons-table/persons-table.component';
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
 import { AddButtonComponent } from './add-button/add-button.component';
+import { PersonDataProvider } from './data-providers/person-data-provider';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonsTableComponent,
     DeleteButtonComponent,
-    AddButtonComponent
+    AddButtonComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule    
   ],
-  providers: [],
+  providers: [PersonDataProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
