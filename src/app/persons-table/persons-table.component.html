@@ -1,17 +1,23 @@
-<p>persons-table works!</p>
-
-<table>
-    <thead>
-        <tr>				
-            <th>name</th>
-            <th>hobby</th>
-        </tr>
-    </thead>
-
-    <!-- Рисуем строки с данными -->
-    <tr *ngFor="let person of persons" >
-        <td>{{person.lastname}}</td>
-        <td>{{person.card}}</td>
-    </tr>
-
-</table>
+<div class="clients">
+    <table class="clients__table">
+        <thead>
+            <tr>
+                <th>Last name</th>
+                <th>Card</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of persons; index as i;">
+                <td>{{person.lastname}}</td>
+                <td>{{person.card}}</td>
+                <td>
+                    <button class='btn btn-danger' (click)="deleteRow(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+        <input type="text" [(ngModel)]="lastName" placeholder="name">
+        <input type="text" [(ngModel)]="card" placeholder="card">
+        <button (click)="addRow(lastName, card)">Click to Insert New Row</button>
+    </table>
+</div>
