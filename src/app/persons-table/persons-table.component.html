@@ -1,24 +1,27 @@
-<div class="clients">
-    <table class="clients__table">
-        <thead>
-            <tr>
-                <th>User name</th>
-                <th>Card</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let person of persons; index as i;">
-                <td>{{person.lastname}}</td>
-                <td>{{person.card}}</td>
-                <td>
-                    <button 
-                            class="clients__delete" 
-                            (click)="deleteRow(i)">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="wrap">
+    <div class="wrap__table">
+        <table class="clients__table">
+            <thead>
+                <tr>
+                    <th>User name</th>
+                    <th>Card</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of persons; index as i;">
+                    <td>{{person.lastname}}</td>
+                    <td>{{person.card}}</td>
+                    <td>
+                        <button 
+                                class="clients__delete" 
+                                (click)="deleteRow(i)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div class="clients__input">
         <input 
                 type="text" 
@@ -30,16 +33,16 @@
                 placeholder="card">
         <button 
                 (click)="addRow(lastName, card)" 
-                class="clients__add">Click to Insert New Row</button>
+                class="clients__add">Add new row</button>
     </div>
-</div>
-
-<div class="clients__section">
-    <div class="clients__block" *ngFor="let person of persons; index as i;">
-        <div class="clients__name">{{person.lastname}}</div>
-        <div class="clients__card">{{person.card}}</div>
-        <button 
-                class="clients__delete" 
-                (click)="deleteRow(i)">Delete</button>
+    
+    <div class="wrap__blocks">
+        <div class="clients__block" *ngFor="let person of persons; index as i;">
+            <div class="clients__name">{{person.lastname}}</div>
+            <div class="clients__card">{{person.card}}</div>
+            <button 
+                    class="clients__delete" 
+                    (click)="deleteRow(i)">Delete</button>
+        </div>
     </div>
 </div>

@@ -8,7 +8,6 @@ import { Person } from '../Models/Person';
   styleUrls: ['./persons-table.component.css']
 })
 export class PersonsTableComponent implements OnInit {
-
   private personDataProvider: PersonDataProvider = new PersonDataProvider;
   public persons: Person[] = [];
   lastName: string = '';
@@ -18,7 +17,6 @@ export class PersonsTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.persons = this.personDataProvider.getAll();
-    console.log(this.persons);
   }
 
   deleteRow(index: number) {
@@ -26,8 +24,8 @@ export class PersonsTableComponent implements OnInit {
   }
 
   addRow(lastName: string, card: string) {
-    let newClient = new Person (lastName, card)
-    this.persons.push(newClient);
+    let newPerson = new Person(lastName, card)
+    this.persons.push(newPerson);
 
     this.lastName = '';
     this.card = '';

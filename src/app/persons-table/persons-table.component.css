@@ -1,7 +1,7 @@
-.clients {
-    overflow:scroll;
+.wrap__table {
+    overflow: scroll;
     overflow-x: hidden;
-    height: 700px;
+    height: 400px;
 }
 
 .clients__table {
@@ -15,32 +15,34 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-thead tr {
+.clients__table thead tr {
     background-color: #07725d;
     color: #ffffff;
     text-align: left;
 }
 
-th, td {
+.clients__table th,
+.clients__table td {
     padding: 12px 15px;
 }
 
-td:hover {
+.clients__table td:hover {
     font-weight: bold;
 }
 
-td:first-child {
-    text-align: center;}
+.clients__table td:first-child {
+    text-align: center;
+}
 
-tr {
+.clients__table tr {
     border-bottom: 1px solid #dddddd;
 }
 
-tr:nth-of-type(even) {
+.clients__table tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-tr:last-of-type {
+.clients__table tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
@@ -51,6 +53,7 @@ tr:last-of-type {
 
 .clients__input {
     margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     gap: 8px;
 }
@@ -59,28 +62,34 @@ tr:last-of-type {
     width: 100%;
 }
 
-input {
+.clients__input>input {
     width: 100%;
     padding: 12px 20px;
 }
 
-input[type=text]:focus {
+.clients__input>input[type=text]:focus {
     outline: none;
-    border: 2px solid #07725d; 
+    border: 2px solid #07725d;
 }
 
-.clients__section {
+.wrap__blocks {
     display: flex;
     flex-wrap: wrap;
+
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .clients__block {
+    display: flex;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding: 5px;
     width: 30%;
-    border: 1px #07725d;
-    background-color: hsl(169, 100%, 96%);
+    border: 1px solid #ACB5BD;
 }
 
 .clients__block:nth-child(3n+3) {
-    background-color: red;
     width: 40%;
 }

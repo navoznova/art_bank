@@ -1,4 +1,3 @@
-
 export class Person {
   lastname: string;
   card: string;
