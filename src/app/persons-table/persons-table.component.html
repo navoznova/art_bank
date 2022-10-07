@@ -12,12 +12,34 @@
                 <td>{{person.lastname}}</td>
                 <td>{{person.card}}</td>
                 <td>
-                    <button class='btn btn-danger' (click)="deleteRow(i)">Delete</button>
+                    <button 
+                            class="clients__delete" 
+                            (click)="deleteRow(i)">Delete</button>
                 </td>
             </tr>
         </tbody>
-        <input type="text" [(ngModel)]="lastName" placeholder="name">
-        <input type="text" [(ngModel)]="card" placeholder="card">
-        <button (click)="addRow(lastName, card)">Click to Insert New Row</button>
     </table>
+    <div class="clients__input">
+        <input 
+                type="text" 
+                [(ngModel)]="lastName" 
+                placeholder="name">
+        <input 
+                type="text" 
+                [(ngModel)]="card" 
+                placeholder="card">
+        <button 
+                (click)="addRow(lastName, card)" 
+                class="clients__add">Click to Insert New Row</button>
+    </div>
+</div>
+
+<div class="clients__section">
+    <div class="clients__block" *ngFor="let person of persons; index as i;">
+        <div class="clients__name">{{person.lastname}}</div>
+        <div class="clients__card">{{person.card}}</div>
+        <button 
+                class="clients__delete" 
+                (click)="deleteRow(i)">Delete</button>
+    </div>
 </div>

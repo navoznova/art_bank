@@ -1,16 +1,17 @@
 .clients {
     overflow:scroll;
     overflow-x: hidden;
-    height: 630px;
+    height: 700px;
 }
 
 .clients__table {
+    width: 100%;
     padding: 24px 32px 32px 32px;
     border: 1px solid #ACB5BD;
     border-radius: 8px;
 
     font-size: 0.9em;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -24,6 +25,13 @@ th, td {
     padding: 12px 15px;
 }
 
+td:hover {
+    font-weight: bold;
+}
+
+td:first-child {
+    text-align: center;}
+
 tr {
     border-bottom: 1px solid #dddddd;
 }
@@ -34,4 +42,45 @@ tr:nth-of-type(even) {
 
 tr:last-of-type {
     border-bottom: 2px solid #009879;
+}
+
+.clients__delete:hover {
+    color: white;
+    background-color: #07725d;
+}
+
+.clients__input {
+    margin-top: 30px;
+    display: flex;
+    gap: 8px;
+}
+
+.clients__add {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 2px solid #07725d; 
+}
+
+.clients__section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clients__block {
+    width: 30%;
+    border: 1px #07725d;
+    background-color: hsl(169, 100%, 96%);
+}
+
+.clients__block:nth-child(3n+3) {
+    background-color: red;
+    width: 40%;
 }
