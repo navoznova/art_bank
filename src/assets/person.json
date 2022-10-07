@@ -1,7 +1,12 @@
 [
-    {"name": "Тодорис", "card": "Спортзал"},
-    {"name": "Джордж", "card": "Рыбалка"},
-    {"name": "Джон", "card": "Баскетбол"},
-    {"name": "Ник", "card": "Футбол"},
-    {"name": "Пол", "card": "Бильярд"}
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"},
+    {"name": "User name", "card": "123456789"}
   ]
